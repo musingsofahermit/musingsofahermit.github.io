@@ -3,7 +3,7 @@ export const SITE = {
   author: "The Hermit",
   profile: "https://satnaing.dev/",
   desc: "Geoplitics, Coffee and Random Thoughts.",
-  title: "Musings Of a Hermit",
+  title: "Musings of a Hermit",
   ogImage: "astropaper-og.jpg",
   lightAndDarkMode: true,
   postPerIndex: 4,
