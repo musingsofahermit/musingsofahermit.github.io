@@ -37,17 +37,48 @@ html[data-theme="dark"] {
   }
   html {
     @apply overflow-y-scroll scroll-smooth;
+    /* Smooth transition for theme changes */
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
   body {
     @apply flex min-h-svh flex-col bg-background font-app text-foreground selection:bg-accent/75 selection:text-background;
+    /* Ensure body inherits the transition */
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
   a,
   button {
     @apply outline-offset-1 outline-accent focus-visible:no-underline focus-visible:outline-2 focus-visible:outline-dashed;
+    transition: text-shadow 0.2s ease, box-shadow 0.2s ease;
+  }
+  /* Subtle link glow on hover (optional, can be removed) */
+  a:hover {
+    text-shadow: 0 0 3px var(--color-accent);
   }
   button:not(:disabled),
   [role="button"]:not(:disabled) {
     cursor: pointer;
+  }
+  /* Back‑to‑top button transition – as requested */
+  #back-to-top {
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+  }
+  #back-to-top[data-visible="false"] {
+    opacity: 0;
+    visibility: hidden;
+  }
+  /* Improve focus visibility for the button */
+  #back-to-top:focus-visible {
+    outline: 2px dashed var(--color-accent);
+    outline-offset: 2px;
+  }
+  /* Optional: Add a subtle text shadow to headings (inspired by other forks) */
+  h1, h2, h3, h4, h5, h6 {
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  }
+  /* Dark mode heading shadow adjustment */
+  [data-theme="dark"] h1, [data-theme="dark"] h2, [data-theme="dark"] h3,
+  [data-theme="dark"] h4, [data-theme="dark"] h5, [data-theme="dark"] h6 {
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   }
 }
 
