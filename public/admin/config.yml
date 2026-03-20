@@ -1,14 +1,10 @@
-backend:
-  name: git-gateway
-  branch: main   # if your default branch is "main"
-
 media_folder: "public/assets/blog"
 public_folder: "/assets/blog"
 
 collections:
   - name: "blog"
     label: "Blog"
-    folder: "src/content/blog"
+    folder: "src/data/blog"     # AstroPaper stores posts here
     create: true
     slug: "{{slug}}"
     fields:
