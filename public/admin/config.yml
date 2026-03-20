@@ -1,10 +1,18 @@
+backend:
+  name: github
+  repo: musingsofahermit/musingsofahermit.github.io
+  branch: main
+  base_url: https://api.netlify.com
+  auth_endpoint: auth
+
+publish_mode: editorial_workflow
 media_folder: "public/assets/blog"
 public_folder: "/assets/blog"
 
 collections:
   - name: "blog"
     label: "Blog"
-    folder: "src/data/blog"     # AstroPaper stores posts here
+    folder: "src/data/blog"
     create: true
     slug: "{{slug}}"
     fields:
