@@ -6,6 +6,23 @@
   <title>Content Manager</title>
 </head>
 <body>
-  <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
+  <!-- Netlify Identity widget (for OAuth) -->
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <!-- Decap CMS script (latest) -->
+  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <script>
+    CMS.init({
+      config: {
+        backend: {
+          name: 'github',
+          repo: 'musingsofahermit/musingsofahermit.github.io',  // your repo
+          branch: 'main',                                      // your default branch
+          base_url: 'https://api.netlify.com',
+          auth_endpoint: 'auth',
+        },
+        publish_mode: 'editorial_workflow',
+      },
+    });
+  </script>
 </body>
 </html>
