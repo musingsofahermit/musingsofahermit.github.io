@@ -2,8 +2,8 @@ export const SITE = {
   website: "https://musingsofahermit.netlify.app/", // replace this with your deployed domain
   author: "The Hermit",
   profile: "https://satnaing.dev/",
-  desc: "Ceoplitics, Coffee and Random Thoughts.",
-  title: "Musings Of A Hermit",
+  desc: "Geoplitics, Coffee and Random Thoughts.",
+  title: "Musings Of a Hermit",
   ogImage: "astropaper-og.jpg",
   lightAndDarkMode: true,
   postPerIndex: 4,
